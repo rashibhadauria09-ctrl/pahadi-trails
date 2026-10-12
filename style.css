@@ -1,0 +1,751 @@
+
+/* PAHADI TRAILS - WEBSITE DESIGN */
+
+/* 1. Main theme */
+:root {
+    --forest: #1d382e;
+    --cream: #f5f2e9;
+    --paper: #fffdf7;
+    --sage: #a8bd9d;
+    --text: #293b30;
+    --muted: #6d786d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--paper);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 2. Navigation bar */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--paper);
+    border-bottom: 1px solid #e4e4da;
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 78px;
+    margin: auto;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--forest);
+}
+
+.logo span {
+    color: #83977a;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #819a73;
+}
+
+/* 3. Hero section */
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 80px max(30px, calc((100% - 1140px) / 2));
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(15, 35, 26, 0.85),
+        rgba(15, 35, 26, 0.18)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.eyebrow {
+    color: #72866e;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.light {
+    color: #d3dfca;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(48px, 7vw, 86px);
+    font-weight: normal;
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+h1 em,
+h2 em {
+    color: var(--sage);
+    font-weight: normal;
+}
+
+.hero-text {
+    max-width: 460px;
+    color: #edf0e8;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 21px;
+    background: var(--paper);
+    color: var(--forest);
+    font-size: 13px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background: #e0e9d9;
+}
+
+.hero-caption {
+    margin-top: 65px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #e3e9de;
+}
+
+/* 4. Introduction section */
+.section {
+    padding: 95px max(30px, calc((100% - 1140px) / 2));
+}
+
+.intro {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 45px;
+}
+
+.intro h2,
+.section-heading h2,
+.featured h2,
+.itinerary h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 4.5vw, 57px);
+    line-height: 1.15;
+    font-weight: normal;
+    margin-bottom: 22px;
+}
+
+.intro h2 em,
+.section-heading h2 em,
+.featured h2 em {
+    color: #7b9274;
+}
+
+.intro-content p:not(.eyebrow) {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* 5. Section headings */
+.destinations,
+.tips {
+    background: var(--paper);
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.heading-description {
+    max-width: 330px;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+/* 6. Destination cards */
+.destination-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: 17px;
+}
+
+.destination-card {
+    position: relative;
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+    min-height: 230px;
+    padding: 25px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    isolation: isolate;
+    transition: background-size 0.3s;
+}
+
+.destination-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        0deg,
+        rgba(13, 31, 23, 0.9),
+        rgba(13, 31, 23, 0.02)
+    );
+}
+
+.destination-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: inherit;
+    transition: transform 0.5s;
+}
+
+.destination-card:hover::after {
+    transform: scale(1.06);
+}
+
+.chopta {
+    grid-row: span 2;
+    background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85");
+}
+
+.kedarnath {
+    background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=85");
+}
+
+.auli {
+    background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85");
+}
+
+.valley {
+    grid-column: span 2;
+    background-image: url("https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1100&q=85");
+}
+
+.card-info p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    color: #dce5d7;
+}
+
+.card-info h3 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.card-info span {
+    font-size: 12px;
+    color: #edf0e8;
+}
+
+.small-note {
+    margin-top: 18px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* 7. Featured trek */
+.featured {
+    background: #e9ede3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.featured-image {
+    min-height: 490px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 25px;
+    background:
+        linear-gradient(0deg, rgba(15, 35, 26, 0.3), transparent),
+        url("https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1100&q=85")
+        center / cover no-repeat;
+}
+
+.image-label {
+    padding: 15px 18px;
+    background: var(--forest);
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.featured h2 {
+    font-size: clamp(35px, 4vw, 49px);
+}
+
+.featured-content > p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.trek-details {
+    margin: 25px 0;
+    border-top: 1px solid #cbd4c6;
+}
+
+.trek-details div {
+    padding: 12px 0;
+    border-bottom: 1px solid #cbd4c6;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.trek-details span {
+    color: #71816d;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.trek-details strong {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.dark-button {
+    background: var(--forest);
+    color: white;
+}
+
+.dark-button:hover {
+    background: #345342;
+}
+
+/* 8. Sample itinerary */
+.itinerary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    background: var(--forest);
+    color: white;
+}
+
+.itinerary h2 em {
+    color: #b7c9a9;
+}
+
+.itinerary-intro > p:last-child {
+    color: #c4d0c2;
+    max-width: 410px;
+    font-size: 14px;
+}
+
+.timeline {
+    border-top: 1px solid #536b5c;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 17px;
+    padding: 24px 0;
+    border-bottom: 1px solid #536b5c;
+}
+
+.timeline-item > span {
+    color: #b7c9a9;
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.timeline-item h3 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.timeline-item p {
+    color: #c4d0c2;
+    font-size: 13px;
+}
+
+/* 9. Travel tips */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #dcded2;
+    border-bottom: 1px solid #dcded2;
+}
+
+.tip-card {
+    padding: 28px 20px;
+    border-right: 1px solid #dcded2;
+}
+
+.tip-card:first-child {
+    padding-left: 0;
+}
+
+.tip-card:last-child {
+    border-right: none;
+}
+
+.tip-number {
+    display: inline-flex;
+    width: 37px;
+    height: 37px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #b7c7af;
+    border-radius: 50%;
+    color: #587354;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.tip-card h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 9px;
+}
+
+.tip-card p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* 10. Closing banner */
+.closing {
+    min-height: 390px;
+    padding: 75px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(15, 35, 26, 0.85),
+        rgba(15, 35, 26, 0.15)),
+        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+}
+
+.closing h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 6vw, 70px);
+    line-height: 1.1;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.closing h2 em {
+    color: #b7c9a9;
+    font-weight: normal;
+}
+
+/* 11. Footer */
+footer {
+    padding: 55px max(30px, calc((100% - 1140px) / 2)) 20px;
+    background: #142820;
+    color: #f4f2e8;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.6fr 0.7fr 0.9fr;
+    gap: 55px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    color: white;
+}
+
+.footer-description {
+    max-width: 350px;
+    margin-top: 15px;
+    color: #b8c6b6;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    color: #c4d0c2;
+    font-size: 12px;
+}
+
+.footer-links h4 {
+    margin-bottom: 7px;
+    color: #aabd9f;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding-top: 18px;
+    border-top: 1px solid #405348;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #a8b6a5;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* 12. Responsive design for tablets */
+@media (max-width: 850px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .featured {
+        gap: 35px;
+    }
+
+    .destination-grid {
+        grid-template-rows: 250px 220px 220px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tip-card:nth-child(2) {
+        border-right: none;
+    }
+
+    .tip-card:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .tip-card:nth-child(3),
+    .tip-card:nth-child(4) {
+        border-top: 1px solid #dcded2;
+    }
+
+    .footer-main {
+        gap: 25px;
+    }
+}
+
+/* 13. Responsive design for mobile phones */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 12px 18px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 7px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 560px;
+        padding: 65px 23px;
+        background-position: 58% center;
+    }
+
+    .hero h1 {
+        font-size: 49px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .hero-caption {
+        margin-top: 45px;
+        font-size: 8px;
+    }
+
+    .section {
+        padding: 62px 23px;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .featured h2,
+    .itinerary h2 {
+        font-size: 37px;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .heading-description {
+        margin-top: 18px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 230px 200px 200px;
+        gap: 10px;
+    }
+
+    .destination-card {
+        min-height: 190px;
+        padding: 12px;
+    }
+
+    .chopta {
+        grid-row: auto;
+    }
+
+    .valley {
+        grid-column: span 2;
+    }
+
+    .card-info h3 {
+        font-size: 23px;
+    }
+
+    .card-info p {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .card-info span {
+        font-size: 10px;
+    }
+
+    .featured,
+    .itinerary {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .featured-image {
+        min-height: 330px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tip-card {
+        padding: 20px 12px;
+    }
+
+    .tip-card:first-child,
+    .tip-card:nth-child(3) {
+        padding-left: 0;
+    }
+
+    .tip-card h3 {
+        font-size: 18px;
+    }
+
+    .tip-card p {
+        font-size: 11px;
+    }
+
+    .closing {
+        min-height: 320px;
+        padding: 55px 23px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .footer-main > div:first-child {
+        grid-column: span 2;
+    }
+
+    footer {
+        padding: 45px 23px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        font-size: 9px;
+    }
+}
