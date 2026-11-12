@@ -1,249 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pahadi Trails | Explore the Himalayas</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pahadi Trails is a practical guide to Himalayan treks in Uttarakhand, with route information, preparation tips and responsible travel advice.">
+  <title>Pahadi Trails | Plan your next Himalayan escape</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Pahadi Trails home"><span class="brand-mark">⌁</span><span>pahadi<span class="brand-light">trails</span><small>FIND YOUR WAY UP</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="#treks">Explore treks</a><a href="#planner">Trip planner</a><a href="#prepare">Get prepared</a><a href="#about">About</a>
+    </nav>
+    <a class="nav-cta" href="#treks">Find a trek <span>↗</span></a>
+  </header>
 
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
-            <a href="#home" class="logo">PAHADI <span>TRAILS.</span></a>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#destinations">Destinations</a>
-                <a href="#trek">Featured Trek</a>
-                <a href="#tips">Travel Tips</a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
+  <main>
     <section class="hero" id="home">
-        <div class="hero-content">
-            <p class="eyebrow">YOUR JOURNEY BEGINS HERE</p>
-            <h1>Find your<br><em>mountain moment.</em></h1>
-            <p class="hero-text">
-                Discover hidden trails, peaceful valleys and the
-                breathtaking beauty of the Indian Himalayas.
-            </p>
-            <a href="#destinations" class="button">Explore Destinations &nbsp; ↗</a>
-            <p class="hero-caption">BREATHE DEEP. WANDER FAR. LEAVE NO TRACE.</p>
-        </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">THE HIMALAYAS ARE CALLING</p>
+        <h1>Less scrolling.<br><em>More summits.</em></h1>
+        <p class="hero-copy">Honest, useful guides to the trails of Uttarakhand — so you can plan better, travel safer and leave the mountains as beautiful as you found them.</p>
+        <div class="hero-actions"><a class="button button-light" href="#treks">Explore destinations <span>↓</span></a><a class="text-link" href="#prepare">First trek? Start here ↗</a></div>
+        <div class="hero-note"><span class="live-dot"></span> Independent student-built travel guide · Uttarakhand, India</div>
+      </div>
+      <div class="hero-side-label">30° NORTH · THE GARHWAL HIMALAYAS</div>
     </section>
 
-    <!-- Introduction -->
-    <section class="intro section">
-        <div class="intro-label">
-            <p class="eyebrow">A LITTLE CLOSER TO NATURE</p>
-        </div>
-        <div class="intro-content">
-            <h2>Some journeys are<br>measured in <em>memories.</em></h2>
-            <p>
-                Pahadi Trails is your guide to exploring the majestic
-                Himalayas. From sacred temples to alpine meadows, discover
-                beautiful destinations, trekking inspiration and practical
-                tips for travelling responsibly.
-            </p>
-        </div>
+    <section class="quick-strip" aria-label="Website highlights">
+      <div><strong>6</strong><span>Trail guides</span></div><div><strong>01</strong><span>Simple trip planner</span></div><div><strong>100%</strong><span>Practical preparation tips</span></div><div><strong>♧</strong><span>Leave no trace</span></div>
     </section>
 
-    <!-- Destinations -->
-    <section class="destinations section" id="destinations">
-        <div class="section-heading">
-            <div>
-                <p class="eyebrow">THE JOURNEY STARTS HERE</p>
-                <h2>Places worth<br><em>the journey.</em></h2>
-            </div>
-            <p class="heading-description">
-                Every trail tells a story. Find the landscape that
-                speaks to your kind of adventure.
-            </p>
-        </div>
-
-        <div class="destination-grid">
-            <article class="destination-card chopta">
-                <div class="card-info">
-                    <p>01 / ALPINE ESCAPE</p>
-                    <h3>Chopta</h3>
-                    <span>Meadows & mountain views</span>
-                </div>
-            </article>
-
-            <article class="destination-card kedarnath">
-                <div class="card-info">
-                    <p>02 / SACRED JOURNEY</p>
-                    <h3>Kedarnath</h3>
-                    <span>Faith in the mountains</span>
-                </div>
-            </article>
-
-            <article class="destination-card auli">
-                <div class="card-info">
-                    <p>03 / WINTER WONDER</p>
-                    <h3>Auli</h3>
-                    <span>Snow peaks & pine forests</span>
-                </div>
-            </article>
-
-            <article class="destination-card valley">
-                <div class="card-info">
-                    <p>04 / WILD & WONDERFUL</p>
-                    <h3>Valley of Flowers</h3>
-                    <span>Nature in full bloom</span>
-                </div>
-            </article>
-        </div>
-        <p class="small-note">
-            Always check local weather, access conditions and official
-            travel guidance before starting your journey.
-        </p>
+    <section class="section intro-section" id="about">
+      <div class="section-kicker">A BETTER WAY TO EXPLORE</div>
+      <div class="intro-grid"><h2>Not just places.<br><em>A plan to get there.</em></h2><div><p class="lead">A beautiful destination is only one part of a good trip. You also need to know the route, the effort involved, the season, and what to carry.</p><p>Pahadi Trails brings those essentials together in one place. Use the guides as a starting point, then confirm current road, weather, permit and trail conditions before you leave.</p></div></div>
     </section>
 
-    <!-- Featured Trek -->
-    <section class="featured section" id="trek">
-        <div class="featured-image">
-            <div class="image-label">GO SLOW. LOOK UP. TAKE IT IN.</div>
-        </div>
-        <div class="featured-content">
-            <p class="eyebrow">THE FEATURED TRAIL</p>
-            <h2>Madhmaheshwar:<br><em>a walk to remember.</em></h2>
-            <p>
-                Walk through charming mountain villages, forest paths and
-                breathtaking landscapes on the way to the revered
-                Madhmaheshwar Temple in Uttarakhand.
-            </p>
-
-            <div class="trek-details">
-                <div>
-                    <span>REGION</span>
-                    <strong>Rudraprayag, Uttarakhand</strong>
-                </div>
-                <div>
-                    <span>EXPERIENCE</span>
-                    <strong>Mountain pilgrimage trek</strong>
-                </div>
-                <div>
-                    <span>REMEMBER</span>
-                    <strong>Carry warm layers and sturdy shoes</strong>
-                </div>
-            </div>
-            <a href="#tips" class="button dark-button">Prepare for the trail ↗</a>
-        </div>
+    <section class="section trek-section" id="treks">
+      <div class="section-heading"><div><div class="section-kicker">CHOOSE YOUR TRAIL</div><h2>Find your <em>kind of wild.</em></h2></div><p>From a first Himalayan hike to a challenging high-altitude journey, find a trail that matches your time and experience.</p></div>
+      <div class="filters"><label class="search-box"><span>⌕</span><input id="trekSearch" type="search" placeholder="Search a place or trek..." aria-label="Search treks"></label><select id="difficultyFilter" aria-label="Filter by difficulty"><option value="all">All difficulty levels</option><option value="Easy">Easy</option><option value="Easy–Moderate">Easy–Moderate</option><option value="Moderate">Moderate</option><option value="Moderate–Difficult">Moderate–Difficult</option></select></div>
+      <div class="trek-grid" id="trekGrid">
+        <article class="trek-card" data-name="chopta tungnath chandrashila" data-difficulty="Easy–Moderate" data-season="Mar–Jun, Sep–Nov">
+          <div class="trek-image image-chandrashila"><span class="image-tag">SUMMIT VIEWS</span><span class="image-number">01</span></div><div class="trek-body"><div class="card-meta"><span>RUDRAPRAYAG</span><span>3,690–4,000 m approx.</span></div><h3>Chopta – Tungnath – Chandrashila</h3><p>A rewarding climb through meadows to Tungnath temple and onward to a panoramic summit.</p><div class="trek-facts"><span>↗ 3–4 days suggested</span><span>◷ 8–10 km summit return*</span></div><div class="card-bottom"><span class="difficulty moderate">Easy–Moderate</span><button class="details-button" data-trek="chandrashila">Trail details ↗</button></div></div>
+        </article>
+        <article class="trek-card" data-name="kedarkantha sankri juda lake" data-difficulty="Moderate" data-season="Dec–Apr, May–Jun">
+          <div class="trek-image image-kedarkantha"><span class="image-tag">WINTER CLASSIC</span><span class="image-number">02</span></div><div class="trek-body"><div class="card-meta"><span>UTTARKASHI</span><span>3,800 m approx.</span></div><h3>Kedarkantha</h3><p>A popular summit trek via forest trails and campsites near Juda ka Talab, especially known for winter scenery.</p><div class="trek-facts"><span>↗ 5–6 days suggested</span><span>◷ Around 20 km trek*</span></div><div class="card-bottom"><span class="difficulty moderate">Moderate</span><button class="details-button" data-trek="kedarkantha">Trail details ↗</button></div></div>
+        </article>
+        <article class="trek-card" data-name="kedarnath gaurikund temple yatra" data-difficulty="Moderate" data-season="May–Jun, Sep–Oct (official dates apply)">
+          <div class="trek-image image-kedarnath"><span class="image-tag">PILGRIMAGE TRAIL</span><span class="image-number">03</span></div><div class="trek-body"><div class="card-meta"><span>RUDRAPRAYAG</span><span>3,583 m approx.</span></div><h3>Kedarnath</h3><p>A high-altitude pilgrimage to the revered shrine, reached by road to Gaurikund and a steep mountain trail.</p><div class="trek-facts"><span>↗ 2–3 days from Rishikesh*</span><span>◷ 16–18 km one way*</span></div><div class="card-bottom"><span class="difficulty moderate">Moderate</span><button class="details-button" data-trek="kedarnath">Trail details ↗</button></div></div>
+        </article>
+        <article class="trek-card" data-name="madhyamaheshwar madhmaheshwar ransi" data-difficulty="Moderate–Difficult" data-season="May–Jun, Sep–Oct (temple dates apply)">
+          <div class="trek-image image-madhyamaheshwar"><span class="image-tag">PANCH KEDAR</span><span class="image-number">04</span></div><div class="trek-body"><div class="card-meta"><span>RUDRAPRAYAG</span><span>3,497 m approx.</span></div><h3>Madhyamaheshwar</h3><p>A longer forest-and-village trail to a remote Panch Kedar shrine, with an optional steep climb to Budha Madhmaheshwar.</p><div class="trek-facts"><span>↗ 3–4 trekking days*</span><span>◷ 16–18 km one way*</span></div><div class="card-bottom"><span class="difficulty hard">Moderate–Difficult</span><button class="details-button" data-trek="madhyamaheshwar">Trail details ↗</button></div></div>
+        </article>
+        <article class="trek-card" data-name="auli gorson bugyal" data-difficulty="Easy" data-season="Apr–Jun, Dec–Feb (snow dependent)">
+          <div class="trek-image image-auli"><span class="image-tag">MEADOW WALK</span><span class="image-number">05</span></div><div class="trek-body"><div class="card-meta"><span>CHAMOLI</span><span>Gorson ~3,050 m</span></div><h3>Auli – Gorson Bugyal</h3><p>Open alpine meadows and mountain views make this a gentler option, though snow and weather can change the effort.</p><div class="trek-facts"><span>↗ 1–2 days suggested</span><span>◷ 6–8 km return*</span></div><div class="card-bottom"><span class="difficulty easy">Easy</span><button class="details-button" data-trek="auli">Trail details ↗</button></div></div>
+        </article>
+        <article class="trek-card" data-name="valley of flowers govindghat ghangaria" data-difficulty="Moderate" data-season="Jul–Sep (monsoon; check conditions)">
+          <div class="trek-image image-flowers"><span class="image-tag">MONSOON BLOOMS</span><span class="image-number">06</span></div><div class="trek-body"><div class="card-meta"><span>CHAMOLI</span><span>3,500 m approx.</span></div><h3>Valley of Flowers</h3><p>A seasonal national-park valley reached from Ghangaria. The route is beautiful but monsoon rain makes planning essential.</p><div class="trek-facts"><span>↗ 3–4 days suggested</span><span>◷ 4–6 km valley walk*</span></div><div class="card-bottom"><span class="difficulty moderate">Moderate</span><button class="details-button" data-trek="flowers">Trail details ↗</button></div></div></article>
+      </div>
+      <p class="fine-print">*Distances and durations are approximate planning figures, not official guarantees. Routes, access, snow, weather and local rules can change. Check current conditions before travel.</p>
+      <p class="no-results" id="noResults" hidden>No matching trail found. Try another search or difficulty level.</p>
     </section>
 
-    <!-- Itinerary -->
-    <section class="itinerary section">
-        <div class="itinerary-intro">
-            <p class="eyebrow light">A SIMPLE TRAIL OUTLINE</p>
-            <h2>Make room for<br><em>the unexpected.</em></h2>
-            <p>
-                A sample itinerary to help you plan thoughtfully.
-                Actual timings depend on weather, fitness and local advice.
-            </p>
-        </div>
+    <section class="feature-band"><div class="feature-image"></div><div class="feature-content"><div class="section-kicker">THE MOUNTAIN RULE</div><h2>Go prepared.<br><em>Come back safe.</em></h2><p>Altitude, cold, rain and long descents can turn a beautiful day into a difficult one. Build your fitness gradually, keep a flexible schedule and never push on just to reach a summit.</p><a class="button button-dark" href="#prepare">Read the preparation guide <span>↗</span></a></div></section>
 
-        <div class="timeline">
-            <div class="timeline-item">
-                <span>01</span>
-                <div>
-                    <h3>Reach the trailhead</h3>
-                    <p>Travel to the Ransi area, settle in and check local conditions.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <span>02</span>
-                <div>
-                    <h3>Walk through the mountains</h3>
-                    <p>Start early, stay hydrated and take regular breaks along the trail.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <span>03</span>
-                <div>
-                    <h3>Pause and appreciate</h3>
-                    <p>Enjoy the mountain scenery while respecting local customs and nature.</p>
-                </div>
-            </div>
-        </div>
+    <section class="section planner-section" id="planner"><div class="section-kicker">A LITTLE HELP BEFORE YOU GO</div><div class="section-heading"><div><h2>Build a rough <em>trip plan.</em></h2></div><p>Choose a trail and see a simple starting checklist. This is a planning aid, not a live booking or weather service.</p></div>
+      <div class="planner-card"><div class="planner-form"><label for="plannerTrek">Where do you want to go?</label><select id="plannerTrek"><option value="chandrashila">Chopta – Chandrashila</option><option value="kedarkantha">Kedarkantha</option><option value="kedarnath">Kedarnath</option><option value="madhyamaheshwar">Madhyamaheshwar</option><option value="auli">Auli – Gorson Bugyal</option><option value="flowers">Valley of Flowers</option></select><label for="travelMonth">When are you thinking of going?</label><select id="travelMonth"><option value="spring">Spring (Mar–Apr)</option><option value="summer">Summer (May–Jun)</option><option value="monsoon">Monsoon (Jul–Sep)</option><option value="autumn">Autumn (Oct–Nov)</option><option value="winter">Winter (Dec–Feb)</option></select><label class="check-label"><input type="checkbox" id="firstTrek" checked> This is my first Himalayan trek</label><button class="button button-dark" id="makePlan">Create my checklist ↗</button></div><div class="planner-result" id="plannerResult" aria-live="polite"><span class="result-icon">✳</span><p class="section-kicker">YOUR STARTING POINT</p><h3>Your trail checklist will appear here.</h3><p>Choose a destination and season, then create your plan.</p></div></div>
     </section>
 
-    <!-- Travel Tips -->
-    <section class="tips section" id="tips">
-        <div class="section-heading">
-            <div>
-                <p class="eyebrow">LEAVE ONLY FOOTPRINTS</p>
-                <h2>Travel well.<br><em>Travel lightly.</em></h2>
-            </div>
-            <p class="heading-description">
-                Small choices make a difference to the mountains,
-                the local community and your own experience.
-            </p>
-        </div>
-
-        <div class="tips-grid">
-            <article class="tip-card">
-                <span class="tip-number">01</span>
-                <h3>Pack in layers</h3>
-                <p>Carry warm clothes, rain protection, sturdy footwear and a reusable bottle.</p>
-            </article>
-            <article class="tip-card">
-                <span class="tip-number">02</span>
-                <h3>Respect the trail</h3>
-                <p>Take your waste back and avoid disturbing wildlife or damaging plants.</p>
-            </article>
-            <article class="tip-card">
-                <span class="tip-number">03</span>
-                <h3>Check conditions</h3>
-                <p>Check weather, road access, permits and official advice before travelling.</p>
-            </article>
-            <article class="tip-card">
-                <span class="tip-number">04</span>
-                <h3>Support local</h3>
-                <p>Choose local guides and homestays when possible, and respect local customs.</p>
-            </article>
-        </div>
+    <section class="section prepare-section" id="prepare"><div class="section-kicker">BEFORE YOU HIT THE TRAIL</div><div class="section-heading"><div><h2>Prepare like a <em>mountain local.</em></h2></div><p>Small preparations make a big difference. Save this checklist and tick things off before departure.</p></div>
+      <div class="prep-grid"><div class="prep-list"><h3>Your pre-trek checklist</h3><div class="checklist" id="prepChecklist"><label><input type="checkbox"> <span>Build stamina with regular walks and stair climbing.</span></label><label><input type="checkbox"> <span>Break in comfortable trekking shoes before the trip.</span></label><label><input type="checkbox"> <span>Check weather, road status and official local advisories.</span></label><label><input type="checkbox"> <span>Book a registered guide/operator where required or appropriate.</span></label><label><input type="checkbox"> <span>Carry valid ID, cash and emergency contact details.</span></label><label><input type="checkbox"> <span>Pack layers, rain protection, water and personal medicines.</span></label><label><input type="checkbox"> <span>Share your itinerary with someone at home.</span></label><label><input type="checkbox"> <span>Carry back all waste; do not leave plastic on the trail.</span></label></div><p class="progress-text" id="progressText">0 of 8 completed</p><div class="progress-track"><span id="progressBar"></span></div></div>
+        <div class="prep-notes"><article><span>01 / FITNESS</span><h3>Train before the climb</h3><p>Start with brisk walking, stairs and light leg-strength exercises several weeks ahead. Increase distance gradually and include rest days.</p></article><article><span>02 / LAYERS</span><h3>Pack for changing weather</h3><p>Use a moisture-wicking base layer, warm mid-layer and wind/rain shell. Add a hat, gloves and spare socks in cold conditions.</p></article><article><span>03 / ALTITUDE</span><h3>Listen to your body</h3><p>Headache, nausea, dizziness and unusual fatigue can be signs of altitude illness. Stop ascending and seek help if symptoms appear or worsen.</p></article><article><span>04 / RESPONSIBILITY</span><h3>Respect the mountain</h3><p>Stay on marked trails, follow local instructions, avoid loud music and fires, and never disturb wildlife or remove plants.</p></article></div></div>
     </section>
 
-    <!-- Closing Banner -->
-    <section class="closing">
-        <p class="eyebrow light">YOUR NEXT CHAPTER IS OUT THERE</p>
-        <h2>Take the scenic<br><em>route.</em></h2>
-        <a href="#home" class="button">Back to the top ↑</a>
-    </section>
+    <section class="resource-section"><div class="resource-inner"><div><div class="section-kicker">CHECK BEFORE YOU TRAVEL</div><h2>Use official information<br><em>for the final call.</em></h2><p>Our guides help you plan. Official departments and local authorities provide the latest operational instructions.</p></div><div class="resource-links"><a href="https://registrationandtouristcare.uk.gov.in/" target="_blank" rel="noopener">Uttarakhand Tourist Care & Yatra registration <span>↗</span></a><a href="https://www.uttarakhandtourism.gov.in/" target="_blank" rel="noopener">Uttarakhand Tourism – destination & trek guides <span>↗</span></a><a href="https://rudraprayag.gov.in/kedarnath-yatra-2/" target="_blank" rel="noopener">Rudraprayag district – Kedarnath Yatra updates <span>↗</span></a><a href="https://www.uttarakhandtourism.gov.in/treks-details/Kedarkantha%20Winter%20Trek" target="_blank" rel="noopener">Official Kedarkantha trek overview <span>↗</span></a></div></div></section>
 
-    <!-- Footer -->
-    <footer id="about">
-        <div class="footer-main">
-            <div>
-                <a href="#home" class="logo footer-logo">PAHADI <span>TRAILS.</span></a>
-                <p class="footer-description">
-                    A student-created travel guide celebrating Himalayan
-                    journeys, thoughtful exploration and the beauty of nature.
-                </p>
-            </div>
-            <div class="footer-links">
-                <h4>EXPLORE</h4>
-                <a href="#destinations">Destinations</a>
-                <a href="#trek">Featured Trek</a>
-                <a href="#tips">Travel Tips</a>
-            </div>
-            <div class="footer-links">
-                <h4>PROJECT DETAILS</h4>
-                <span>Created with HTML5</span>
-                <span>Styled with CSS3</span>
-                <span>Responsive web design</span>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 PAHADI TRAILS</span>
-            <span>MADE WITH A LOVE FOR THE MOUNTAINS</span>
-        </div>
-    </footer>
+    <section class="closing-cta"><p class="section-kicker">TAKE ONLY MEMORIES</p><h2>The trail is yours.<br><em>Keep it wild for the next one.</em></h2><a class="button button-light" href="#treks">Choose your next trail ↑</a></section>
+  </main>
 
+  <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">⌁</span><span>pahadi<span class="brand-light">trails</span><small>FIND YOUR WAY UP</small></span></a><p>A student-built guide for curious, responsible travellers.</p><div class="footer-bottom"><span>© 2026 Pahadi Trails</span><span>Plan thoughtfully · Travel responsibly</span><a href="#home">Back to top ↑</a></div></footer>
+
+  <dialog class="details-dialog" id="detailsDialog"><button class="dialog-close" id="dialogClose" aria-label="Close details">×</button><div id="dialogContent"></div></dialog>
 </body>
 </html>
